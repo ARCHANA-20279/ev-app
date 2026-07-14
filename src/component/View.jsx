@@ -9,7 +9,7 @@ const View = () => {
     const [data,changeData]=useState([])
     const fetchData=()=>{
 
-        axios.get("").then(
+        axios.post("http://localhost:5000/view-booking").then(
            
             (response)=>{
                     console.log(response.data)
@@ -62,7 +62,7 @@ const View = () => {
                                         <td>{value.chargingdate}</td>
                                         <td>{value.time}</td>
                                         <td>{value.unit}</td>
-                                        <td>{value.cghargingno}</td>
+                                        <td>{value.chargingno}</td>
                                     </tr>
                                 ))}
                             </tbody>
